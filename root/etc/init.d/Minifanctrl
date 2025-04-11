@@ -1,0 +1,17 @@
+#!/bin/sh /etc/rc.common
+START=99
+
+printMsg() {
+    local msg="$1"
+    logger -t "${PROGRAM}" "${msg}"
+} 
+
+restart(){                                                                                                       
+  /usr/bin/fancts.sh &
+  printMsg "风扇控制模块开始工作！"
+}
+
+start(){
+  /usr/bin/fancts.sh &
+  printMsg "风扇控制模块开始工作！"
+}
